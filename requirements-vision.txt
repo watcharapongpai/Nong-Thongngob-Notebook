@@ -1,0 +1,7 @@
+# ฟีเจอร์ตรวจรูป (CLIP) — ติดตั้ง torch แบบ CPU ก่อน:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# แล้วค่อย:
+#   pip install -r requirements-vision.txt
+torch
+transformers>=4.40
+pillow>=10.0

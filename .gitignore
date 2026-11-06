@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# ค่าลับ / ตั้งค่าเฉพาะเครื่อง (ถ้ามีในอนาคต)
+.env
+*.log
+
+# ไฟล์ผลลัพธ์ชั่วคราวจาก tools/eval_images.py
+eval_results.csv
+
+# รูปทดสอบ (อาจมีบัตรหรือเอกสารจำลอง) - เก็บไว้ในเครื่อง ไม่อัปขึ้น GitHub
+tests/fixtures/images/*.jpg
+tests/fixtures/images/*.jpeg
+tests/fixtures/images/*.png
+tests/fixtures/images/*.webp
+tests/fixtures/images/*.gif
+tests/fixtures/images/*.bmp
+
+# ไฟล์ระบบ / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/

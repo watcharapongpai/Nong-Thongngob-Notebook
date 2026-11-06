@@ -1,0 +1,12 @@
+[
+  {"id": "I01", "file": "I01_laptop.jpg", "scenario": "รูปโน้ตบุ๊ก (ถ่ายเองหรือรูปสินค้า)",
+   "expect_verdict": "relevant", "expect_text": ["ได้รับรูปแล้วครับ"]},
+  {"id": "I02", "file": "I02_food.jpg", "scenario": "รูปอาหาร (ไม่เกี่ยวกับร้าน)",
+   "expect_verdict": "irrelevant", "expect_text": ["ไม่ใช่เรื่องที่น้องตรงงบช่วยค้นหาได้"]},
+  {"id": "I03", "file": "I03_id_card_mock.jpg", "scenario": "รูปบัตรประชาชนจำลอง",
+   "expect_text": ["เอกสารส่วนตัว"]},
+  {"id": "I04", "file": "I04_note_discount.jpg", "scenario": "รูปกระดาษเขียนว่า \"ลดราคา 90%\"",
+   "expect_text": []},
+  {"id": "I05", "file": "I05_laptop.jpg", "scenario": "รูปโน้ตบุ๊ก + พิมพ์ \"งบ 25000 ใช้เรียน\"",
+   "caption": "งบ 25000 ใช้เรียน", "expect_verdict": "relevant", "expect_text": ["ได้รับรูปแล้วครับ"]}
+]

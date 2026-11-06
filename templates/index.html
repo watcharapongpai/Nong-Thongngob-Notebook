@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ bot_name }} · {{ shop_name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">฿</div>
+        <div>
+          <div class="shop">{{ shop_name }}</div>
+          <div class="status"><span class="dot"></span>{{ bot_name }} · ผู้ช่วยอัตโนมัติ</div>
+        </div>
+      </div>
+      <button id="restart" class="ghost" type="button">เริ่มใหม่</button>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite" aria-label="ข้อความแชท"></main>
+
+    <div class="dock">
+      <div id="chips" class="chips" aria-label="ตัวเลือกด่วน"></div>
+      <div id="preview" class="preview" hidden>
+        <img id="previewImg" alt="รูปที่เลือก">
+        <div class="pv-text">
+          <div id="previewName" class="pv-name"></div>
+          <div class="pv-hint">พิมพ์คำถามเพิ่มได้ หรือกดส่งเลย</div>
+        </div>
+        <button id="clearImg" type="button" class="pv-clear" aria-label="ยกเลิกรูป">×</button>
+      </div>
+      <form id="composer" class="composer" autocomplete="off">
+        <label for="file" class="attach" title="แนบรูป" aria-label="แนบรูป">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2ZM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5ZM8 9.5A1.5 1.5 0 1 1 8 6.5a1.5 1.5 0 0 1 0 3Z"/></svg>
+        </label>
+        <input id="file" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+        <input id="msg" name="msg" maxlength="500" placeholder="พิมพ์ข้อความ หรือแนบรูป" aria-label="พิมพ์ข้อความ">
+        <button id="send" type="submit">ส่ง</button>
+      </form>
+      <p class="foot">ราคาตามข้อมูลร้าน ณ วันที่ {{ data_date }} · {{ bot_name }}ตอบจากข้อมูลสินค้าและนโยบายของร้านเท่านั้น</p>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
